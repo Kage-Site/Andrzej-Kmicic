@@ -1,0 +1,44 @@
+/* Общие стили */
+body {
+    background-color: #1e1e1e; /* фон */
+    display: flex;
+    justify-content: center;
+    padding-top: 30px; /* отступ сверху */
+    font-family: sans-serif;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column; /* вертикально сверху вниз */
+    gap: 20px; /* отступы между фото (по умолчанию) */
+    align-items: center; /* центр по горизонтали */
+}
+
+.gallery img {
+    width: 400px; /* ширина по умолчанию для телефона */
+    height: auto;
+    border-radius: 5px; /* скруглённые края */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* тень */
+}
+
+/* Медиа-запрос для ПК */
+@media (min-width: 1024px) {
+    .gallery {
+        gap: 40px; /* увеличенные отступы на ПК */
+    }
+
+    .gallery img {
+        width: 1300px; /* ширина фото на ПК */
+    }
+}
+
+/* Дополнительно можно добавить планшеты */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .gallery {
+        gap: 30px; /* отступы для планшета */
+    }
+
+    .gallery img {
+        width: 600px; /* ширина фото для планшета */
+    }
+}
